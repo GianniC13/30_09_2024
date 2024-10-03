@@ -46,3 +46,40 @@ console.log(fruits);
 
 const allFruits = fruits.concat(fruitsSubset);
 console.log(allFruits);
+
+
+// JS - Objects
+const person = {
+    name: "John",
+    surname: "Doe",
+    age: 31,
+    address: {
+        street: "Florilor",
+        number: 123
+    },
+    contact: {
+        phone: "0711237483",
+        email: "j_doe@unknown.com"
+    },
+    hobbies: ["hiking", "fishing", "chess"]
+};
+
+console.log("person name: ", person.name);
+console.log("person hobbies: ", person.hobbies);
+console.log("person phone: ", person.contact.phone);
+console.log("person surname: ", person["surname"]); // same thing another metod
+
+// modificarea proprietatilor unui obiect
+person.name = "George";
+console.log("person: ", person);
+
+// compararea de obiecte
+
+const obj1 = {a: 1};
+const obj2 = {a: 1};
+console.log("obj1 === obj2 : ", obj1 === obj2);
+
+const obj3 = obj1;
+console.log("obj3 === obj1: ", obj3 === obj1);
+
+// ai ramas la 1:08:49
