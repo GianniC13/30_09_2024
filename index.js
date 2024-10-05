@@ -82,4 +82,66 @@ console.log("obj1 === obj2 : ", obj1 === obj2);
 const obj3 = obj1;
 console.log("obj3 === obj1: ", obj3 === obj1);
 
-// ai ramas la 1:08:49
+// JS - Date
+const now = new Date();
+console.log(now);
+
+const yesterday = new Date("2024-10-04 12:00:00");
+console.log(yesterday);
+
+// Date methods
+// accesarea proprietatilor unui obiect Date
+console.log("now.getDate(): ", now.getDate()); // returneaza ziua de pe obiectul date
+console.log("now.getDay(): ", now.getDay()); // returneaza ziua din saptamana
+console.log("now.getFullYear(): ", now.getFullYear()); // returneaza anul
+console.log("now.getMonth(): ", now.getMonth()); // returneaza indexul corespunzator lunii intr-un array de 12 obiecte
+console.log("now.getHours(): ", now.getHours()); // returneaza ora
+console.log("now.getMinutes(): ", now.getMinutes()); // returneaza minutele de pe obiectul date
+console.log("now.getMilliseconds: ", now.getMilliseconds());
+
+// setarea proprietatilor unui obiect Date
+yesterday.setFullYear(2023);
+console.log("yesterday: ", yesterday);
+
+yesterday.setMonth(6);
+console.log(yesterday);
+
+yesterday.setDate(21);
+console.log(yesterday);
+
+yesterday.setHours(21);
+console.log(yesterday);
+
+yesterday.setMinutes(36);
+console.log(yesterday);
+
+yesterday.setSeconds(15);
+console.log(yesterday);
+
+// adaugare de zile intr-un obiect date
+yesterday.setDate(yesterday.getDate() + 2);
+console.log(yesterday);
+
+// diferenta dintre doua date in milisecunde
+const difference = now - yesterday;
+console.log("difference: ", difference);
+
+// formatarea unei date
+const year = now.getFullYear();
+const month = now.getMonth();
+const day = now.getDate();
+const weekDay = now.getDay();
+const hour = now.getHours();
+const minutes = now.getMinutes();
+const months = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "October", "Noiembrie", "Decembrie"];
+const weekDays = ["Duminica", "Luni", "Marti", "Miercuri", "Joi", "Vineri", "Saturday"];
+
+const formatedDate = `Year ${year}, month ${months[month]}, day ${day}, ${weekDays[weekDay]}, time: ${hour}:${minutes}`;
+
+console.log(formatedDate);
+
+const newDate = new Date();
+const timeStamp = newDate.getTime();
+console.log(newDate);
+const fromTimeStamp = new Date(timeStamp - 500000);
+console.log("fromTimeStamp: ", fromTimeStamp);
